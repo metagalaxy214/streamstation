@@ -1,0 +1,1487 @@
+// Place all the styles related to the players controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.icon {    
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.listeners-overview .summary ul.overview li.icon {
+    font-size: 2.5em;
+    position: relative;
+    bottom: 5px
+}
+
+.comparison .icon {
+    position: relative;
+    top: 2px
+}
+
+.comparison .increase .icon:before {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+.comparison .decrease .icon:before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.listeners-overview .summary>.icon {
+    position: absolute;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+    left: -43px;
+    top: -25px;
+    color: #ccc
+}
+
+.block-flat .header .icon {
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-left: 2px;
+    padding-left: 1px
+}
+
+.block-flat .content button .icon {
+    vertical-align: inherit
+}
+
+@media print {
+    * {
+        text-shadow: none!important;
+        color: #000!important;
+        background: 0 0!important;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important
+    }
+    img {
+        page-break-inside: avoid;
+        max-width: 100%!important
+    }
+    p {
+        orphans: 3;
+        widows: 3
+    }
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+@media screen and (min-width:2px) {
+    .carousel-control .icon-next,
+    .carousel-control .icon-prev {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        font-size: 30px
+    }
+    .carousel-control .icon-prev {
+        margin-left: -15px
+    }
+    .carousel-control .icon-next {
+        margin-right: -15px
+    }
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+@-moz-document url-prefix() {
+    .form-group input {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 20px!important;
+        height: 42px
+    }
+}
+
+.iphone .screen .icon-left {
+    background: url(../../images/sidebar-menu.png);
+    height: 15px;
+    width: 15px;
+    margin-left: 7px
+}
+
+.iphone .screen .icon-right {
+    background: url(../../images/sidebar-menu.png);
+    height: 15px;
+    width: 15px;
+    float: right;
+    margin-top: -15px;
+    margin-right: 7px
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.chart-tooltip ul li>.icon {
+    font-size: 1.3em;
+    position: absolute;
+    padding-right: 15px;
+    border-right: 1px solid #dadada;
+    bottom: 6px
+}
+
+@media print {
+    * {
+        text-shadow: none!important;
+        color: #000!important;
+        background: 0 0!important;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important
+    }
+    img {
+        page-break-inside: avoid;
+        max-width: 100%!important
+    }
+    p {
+        orphans: 3;
+        widows: 3
+    }
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+@media screen and (min-width:768px) {
+    .carousel-control .icon-next,
+    .carousel-control .icon-prev {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        font-size: 30px
+    }
+    .carousel-control .icon-prev {
+        margin-left: -15px
+    }
+    .carousel-control .icon-next {
+        margin-right: -15px
+    }
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+@-moz-document url-prefix() {
+    .form-group input {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 20px!important;
+        height: 42px
+    }
+}
+
+.checkout-wrapper #checkout .third-step .dropin .ssl-connection .icon {
+    vertical-align: middle
+}
+
+.checkout-wrapper #checkout .plan-extras li .icon {
+    color: #EF4043;
+    margin-right: 5px;
+    margin-left: -20px;
+    vertical-align: middle
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+img {
+    border: 0
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+@media print {
+    * {
+        text-shadow: none!important;
+        color: #000!important;
+        background: 0 0!important;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important
+    }
+    img {
+        page-break-inside: avoid;
+        max-width: 100%!important
+    }
+    p {
+        orphans: 3;
+        widows: 3
+    }
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #656565;
+    background-color: #ececec
+}
+
+img {
+    vertical-align: middle
+}
+
+p {
+    margin: 0 0 10px
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+ul ul {
+    margin-bottom: 0
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block
+}
+
+.carousel-control .icon-prev {
+    left: 50%;
+    margin-left: -10px
+}
+
+.carousel-control .icon-next {
+    right: 50%;
+    margin-right: -10px
+}
+
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    font-family: serif
+}
+
+.carousel-control .icon-prev:before {
+    content: '\2039'
+}
+
+.carousel-control .icon-next:before {
+    content: '\203a'
+}
+
+@media screen and (min-width:768px) {
+    .carousel-control .icon-next,
+    .carousel-control .icon-prev {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        font-size: 30px
+    }
+    .carousel-control .icon-prev {
+        margin-left: -15px
+    }
+    .carousel-control .icon-next {
+        margin-right: -15px
+    }
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+.chosen-container .chosen-results li.highlighted {
+    background-color: #EF4043;
+    background-image: none;
+    color: #fff
+}
+
+.chosen-container .chosen-results li.highlighted em {
+    background: 0 0
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: auto
+}
+
+@-moz-document url-prefix() {
+    .form-group input {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 20px!important;
+        height: 42px
+    }
+}
+
+.inlinecolourpicker .icon {
+    position: relative;
+    left: 10px;
+    top: 11px;
+    font-size: .9em
+}
+
+.nowplaying-wrapper li.icon .icon,
+.upnext-wrapper li.icon .icon {
+    position: absolute;
+    top: 32px;
+    margin-left: 32px;
+    font-size: 1.5em
+}
+
+.manage-queue #manageQueue .icon {
+    color: #EF4043;
+    vertical-align: inherit;
+    font-size: 1.2em;
+    position: relative;
+    top: 2px;
+    margin-right: 4px
+}
+
+.manage-queue .queue-wrapper .bottom-block span .icon {
+    font-size: 1.3em;
+    vertical-align: middle;
+    position: relative;
+    top: 1px;
+    right: 6px
+}
+
+.manage-queue .queue-wrapper .queue-list li .icon {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    display: block;
+    position: absolute;
+    left: 270px;
+    top: 10px;
+    color: #757575;
+    font-size: 1.2em;
+    cursor: pointer
+}
+
+.dj-panel .icon-connection,
+.dj-panel .icon-station,
+.dj-panel .icon-timer {
+    font-size: 1.6em;
+    margin-right: 10px;
+    position: relative;
+    top: 4px
+}
+
+.dj-panel .icon-station {
+    position: absolute;
+    left: -10px;
+    top: -10px
+}
+
+.connection-status .icon {
+    vertical-align: middle
+}
+
+@-webkit-keyframes blinker {
+    0%,
+    50% {
+        opacity: 1
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes blinker {
+    0%,
+    50% {
+        opacity: 1
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+#uploadButton .icon {
+    vertical-align: inherit;
+    font-size: 1.5em;
+    position: relative;
+    top: 2px;
+    margin-right: 4px
+}
+
+.dropdown-menu.new .upload-top-menu li .icon {
+    position: absolute;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+    left: -2px;
+    top: -6px;
+    color: #ccc;
+    display: none
+}
+
+.dropdown-menu.new .upload-top-menu li.active .icon {
+    display: block
+}
+
+.dropdown-menu.new .upload-queue-block .upload-queue li.media .icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer
+}
+
+.reactivation-link .icon {
+    vertical-align: middle
+}
+
+.icon-inline:before,
+.icon-small-inline:before,
+.icon-smallest-inline:before {
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+.icon-small-inline:before {
+    display: inline-block
+}
+
+.icon-smallest-inline:before {
+    font-size: .5em;
+    display: inline-block
+}
+
+.icon-action {
+    cursor: pointer
+}
+
+a .icon,
+a.icon {
+    text-decoration: none
+}
+
+:-moz-placeholder {
+    color: #999!important
+}
+
+::-moz-placeholder {
+    color: #999!important
+}
+
+:-ms-input-placeholder {
+    color: #999!important
+}
+
+.login-wrapper #reset .bottom-section .icon {
+    font-size: 3em
+}
+
+.login-wrapper #reset .bottom-section .icon-tick {
+    color: #5abe83
+}
+
+.login-wrapper #reset .bottom-section .icon-remove {
+    color: #EF4043
+}
+
+.table.table-media thead th .icon {
+    float: right;
+    font-size: .6em;
+    margin-top: 5px
+}
+
+.table-media-edit .icon {
+    cursor: pointer
+}
+
+.table.table-media .colour-block .icon-playlists {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 1.1em
+}
+
+.table.full-width .icon-edit,
+.table.full-width .icon-remove-circle {
+    font-size: 2em;
+    position: relative;
+    left: 3px;
+    bottom: 1px;
+    color: #757575
+}
+
+.table.full-width .icon-edit:hover,
+.table.full-width .icon-remove-circle:hover {
+    color: #959595
+}
+
+.table.full-width thead th .icon {
+    font-size: .9em;
+    color: #ddd;
+    margin-top: 0;
+    margin-right: 7px
+}
+
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.noUi-target {
+    position: relative
+}
+
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0
+}
+
+.noUi-handle {
+    position: relative;
+    z-index: 1
+}
+
+.noUi-stacking .noUi-handle {
+    z-index: 10
+}
+
+.noUi-state-drag * {
+    cursor: inherit!important
+}
+
+.noUi-base {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.noUi-horizontal {
+    height: 4px
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 15px;
+    top: -5px;
+    left: -6px;
+    border-radius: 50%
+}
+
+.noUi-dragable {
+    cursor: w-resize
+}
+
+.noUi-handle {
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    cursor: pointer
+}
+
+[disabled] .noUi-connect,
+[disabled].noUi-connect {
+    background: #B8B8B8
+}
+
+[disabled] .noUi-handle {
+    cursor: not-allowed
+}
+
+span.twitter.share-button {
+    padding: 1px 3px 0 19px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat #f8f8f8;
+    background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat, linear-gradient(#fff, #dedede);
+    -webkit-background-size: 16px 13px, auto auto;
+    background-size: 16px 13px, auto auto;
+    font: 700 11px/17px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    white-space: nowrap
+}
+
+span.embed.share-button {
+    margin-left: 5px;
+    text-decoration: underline;
+    position: relative;
+    top: 1px
+}
+
+span.share-button {
+    display: none;
+    margin-top: 5px
+}
+
+.radioco-player {
+    font-family: Helvetica, Arial, sans-serif;
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.radioco-player * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.radioco-player li,
+.radioco-player p {
+    margin: 0;
+    font-size: 16px
+}
+
+.radioco-player .play-button:before {
+    position: absolute;
+    color: transparent;
+    left: 50%;
+    top: 50%;
+    z-index: 10
+}
+
+.smallplayer-btn {
+    width: 50px;
+    height: 50px
+}
+
+.radioco-player .stopped .play-button:before {
+    content: '\25B6'
+}
+
+.radioco-player .small-buffering .play-button:before {
+    content: '\25DC';
+    -webkit-animation-name: rotateAnim;
+    animation-name: rotateAnim;
+    -webkit-animation-duration: .35s;
+    animation-duration: .35s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+.radioco-player .playing .play-button:before {
+    background: 0 0;
+    content: '\25A0'
+}
+
+.radioco-player img {
+    border: 0
+}
+
+.radioco-player .streamtime {
+    margin-left: 20px;
+    position: relative;
+    bottom: 2px
+}
+
+.radioco-player .wrap {
+    margin: 0 auto;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, .05);
+    border-radius: 8px
+}
+
+.radioco-player .playing .artwork.play-button:before {
+    color: rgba(255, 255, 255, .8);
+    font-size: 3em;
+    margin-top: -33px;
+    margin-left: 36px
+}
+
+.radioco-player .trackinformation {
+    position: relative
+}
+
+.radioco-player .trackinformation>ul {
+    list-style: none;
+    position: relative;
+    bottom: 2px;
+    padding: 0;
+    white-space: nowrap
+}
+
+.radioco-player .trackinformation>ul>li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 5px
+}
+
+.radioco-player .trackinformation>ul>li:last-child {
+    font-size: 14px
+}
+
+.radioco-player .play-button {
+    position: relative;
+    cursor: pointer
+}
+
+.radioco-player .controls .smallplayer.play-button:before {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    left: 33%;
+    top: 11px;
+    margin: 0
+}
+
+.radioco-player .controls.playing .smallplayer.play-button:before {
+    font-size: 2.1em;
+    left: 31%;
+    top: 0
+}
+
+.radioco-player {
+    overflow: auto;
+    position: relative;
+    padding: 0
+}
+
+.radioco-player ul.actions,
+.radioco-player ul.info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex
+}
+
+.radioco-player ul.info .artwork {
+    position: relative
+}
+
+.radioco-player ul.actions .artwork .icon,
+.radioco-player ul.info .artwork .icon {
+    position: absolute;
+    cursor: pointer;
+    top: 17%;
+    margin: 0 35%;
+    font-size: 3em;
+    color: #000;
+    opacity: .9;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease
+}
+
+.radioco-player ul.actions .artwork .icon.icon-playerstop,
+.radioco-player ul.info .artwork .icon.icon-playerstop {
+    opacity: 0
+}
+
+.radioco-player ul.actions .artwork:hover .icon.icon-playerstop,
+.radioco-player ul.info .artwork:hover .icon.icon-playerstop {
+    opacity: .9
+}
+
+.radioco-player ul.info.large {
+    display: block
+}
+
+.radioco-player ul.info.large .controls {
+    margin: 0
+}
+
+.radioco-player ul.info.large .actions {
+    position: relative;
+    top: 5px
+}
+
+.radioco-player ul.info.large .volume-slider {
+    width: 235px
+}
+
+.radioco-player ul.info.large .trackinformation>ul>li {
+    margin: 5px 0;
+    height: 20px
+}
+
+.radioco-player ul.info.large .artwork .icon {
+    top: 40%;
+    font-size: 4em
+}
+
+.radioco-player ul.actions {
+    position: absolute;
+    bottom: 10px
+}
+
+.radioco-player ul.info>li:not(:first-child) {
+    padding: 15px;
+    margin-left: 30px;
+    width: 100%
+}
+
+.radioco-player .controls .play-button {
+    position: relative
+}
+
+.radioco-player .controls .play-button:before {
+    float: left;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    font-size: 16px;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px
+}
+
+.radioco-player .playing .artwork.play-button:before {
+    -webkit-box-shadow: 0 0 5px transparent;
+    box-shadow: 0 0 5px transparent
+}
+
+.radioco-player .speaker {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer
+}
+
+.radioco-player .speaker:after,
+.radioco-player .speaker:before {
+    content: '';
+    position: absolute;
+    top: 0
+}
+
+.radioco-player .speaker:before {
+    top: 4px;
+    width: 8px;
+    height: 8px
+}
+
+.radioco-player .speaker:after {
+    right: 4px;
+    border: 8px solid transparent;
+    border-right: 12px solid transparent;
+    width: 0;
+    height: 0
+}
+
+.radioco-player .speaker .high,
+.radioco-player .speaker .low {
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 0 15px 0 0
+}
+
+.radioco-player .speaker .high {
+    top: 2px;
+    right: -8px;
+    width: 12px;
+    height: 12px;
+    border-width: 6px 6px 0 0;
+    border-style: double
+}
+
+.radioco-player .speaker .low {
+    top: 4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-width: 2px 2px 0 0;
+    border-style: solid
+}
+
+.radioco-player .speaker .muted:before {
+    content: '\00d7';
+    display: block;
+    position: absolute;
+    right: -6px;
+    top: -2px;
+    width: auto;
+    height: auto;
+    font-style: normal
+}
+
+.radioco-player .volume-slider {
+    float: right;
+    width: 130px;
+    margin-top: 5px;
+    margin-left: 10px
+}
+
+@-webkit-keyframes rotateAnim {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotateAnim {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+#playlistBrowser table tr td .add-item .icon,
+#playlistTable table tr td .add-item .icon {
+    vertical-align: middle
+}
+
+.track-info .icon {
+    width: 26px;
+    height: 26px;
+    top: 20px;
+    left: 17px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    border: 1px solid #ebebeb;
+    color: #757575
+}
+
+.track-info .icon.icon-stop {
+    padding: 3px 5px
+}
+
+.track-info .icon.icon-play {
+    padding: 3px 7px 0;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in
+}
+
+.track-info .icon.icon-actions {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 3px 5px;
+    -webkit-animation-name: rotateAnim;
+    animation-name: rotateAnim;
+    -webkit-animation-duration: .35s;
+    animation-duration: .35s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+.track-info li:first-child:hover .icon-play {
+    opacity: 1
+}
+
+.header.searchbox .icon-media {
+    position: absolute;
+    color: #ddd;
+    z-index: 5;
+    top: 37px;
+    left: 27px;
+    border-right: 1px solid #ddd;
+    padding-right: 10px
+}
+
+.header.searchbox .input-group-addon .icon-search {
+    margin-right: 2px!important
+}
+
+@keyframes rotateAnim {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.settings-tabs li a .icon {
+    vertical-align: middle;
+    margin-right: 7px
+}
+
+.settings-layout input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none!important;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    border: 1px solid #dadada;
+    height: 25px;
+    width: 25px;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2)
+}
+
+.settings-layout .form-helper .icon {
+    padding-right: 7px;
+    vertical-align: middle
+}
+
+.settings-layout .cancellation .icon,
+.settings-layout .current-payment-details .icon {
+    font-size: .8em;
+    color: #EF4043;
+    padding-right: 5px
+}
+
+.settings-layout .payment-details .payment-methods .add-method .icon {
+    display: block;
+    font-size: 3em;
+    color: #EF4043
+}
+
+.settings-layout .addons-list .extra .add .icon:after,
+.settings-layout .addons-list .extra .disabled-addon .icon:after,
+.settings-layout .addons-list .extra .remove .icon:after {
+    opacity: 0;
+    font-size: .38em;
+    position: absolute;
+    top: 50px
+}
+
+.settings-layout .addons-list .extra .add:hover .icon:after,
+.settings-layout .addons-list .extra .disabled-addon:hover .icon:after,
+.settings-layout .addons-list .extra .remove:hover .icon:after {
+    opacity: 1
+}
+
+.settings-layout .addons-list .extra .add .icon:after {
+    content: 'Add';
+    left: 5px
+}
+
+.settings-layout .addons-list .extra .remove .icon:after {
+    content: 'Remove';
+    left: -8px
+}
+
+#inviteUser .icon,
+#showAll .icon {
+    position: relative;
+    top: 2px
+}
+
+.grey-content.roles .panel-heading .role-wrapper li .role-icon .icon {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 1.3em;
+    color: #fff
+}
+
+.integration-icon .icon {
+    font-size: 8em
+}
+
+.integration-icon .icon-tunein {
+    color: #36b4a7
+}
+
+.integration-icon .icon-twitter_vertical {
+    color: #55acee
+}
+
+.cancellationModal .cancellationModal-content .highlight {
+    font-family: "Open Sans", sans-serif
+}
+
+@media (max-width:1025px) {
+    @-moz-document url-prefix() {
+        #sidebar-wrapper {
+            padding-top: 70px
+        }
+        .listeners-overview {
+            top: 50px;
+            margin-bottom: 40px
+        }
+    }
+}
+
+#sidebar-wrapper .playStream .icon-stop {
+    left: 5px
+}
+
+.side-station .station-details ul .icon {
+    font-size: 1.4em;
+    position: relative;
+    top: 11px;
+    margin-right: 20px
+}
+
+.current-track div>ul .icon {
+    position: relative;
+    top: 9px;
+    padding-right: 5px;
+    margin-right: 7px
+}
+
+.sidebar-nav .icon {
+    vertical-align: middle;
+    padding-left: 3px;
+    padding-right: 8px
+}
+
+@-webkit-keyframes sequenceOne {
+    0% {
+        height: 10px
+    }
+    50% {
+        height: 50px
+    }
+    100% {
+        height: 10px
+    }
+}
+
+@keyframes sequenceOne {
+    0% {
+        height: 10px
+    }
+    50% {
+        height: 50px
+    }
+    100% {
+        height: 10px
+    }
+}
+
+@-webkit-keyframes sequenceTwo {
+    0% {
+        height: 20px
+    }
+    50% {
+        height: 65px
+    }
+    100% {
+        height: 20px
+    }
+}
+
+@keyframes sequenceTwo {
+    0% {
+        height: 20px
+    }
+    50% {
+        height: 65px
+    }
+    100% {
+        height: 20px
+    }
+}
+
+.station-profile .station-profile-meta .icon:before {
+    font-size: .9em
+}
+
+.label .icon {
+    font-size: 9px;
+    margin-left: 2px;
+    padding-left: 2px
+}
+
+.app-tile.clean.listeners-now .icon,
+.app-tile.clean.upnext-track .icon {
+    color: #f8f8f8
+}
+
+.app-tile.clean.upnext-track .icon,
+.app-tile.detail.listeners-now .icon {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    z-index: 0;
+    font-size: 4em
+}
+
+.timeline-list li i.icon-calendar,
+.timeline-list li i.icon-microphone,
+.timeline-list li i.icon-playlists {
+    position: absolute;
+    left: 70px;
+    border-radius: 50%;
+    font-size: .7em;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 5px 5px 5px 6px
+}
+
+.timeline-list li i.icon-time {
+    vertical-align: middle;
+    padding-right: 2px
+}
+
+.timeline-list li i.icon-microphone {
+    bottom: 22px
+}
+
+.timeline-list li i.icon-calendar,
+.timeline-list li i.icon-playlists {
+    bottom: 5px
+}
+
+.trackPreviewPlayer .controls li .icon {
+    cursor: pointer;
+    font-size: 1.3em;
+    width: 40px;
+    height: 40px;
+    top: 26px;
+    left: 23px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    border: 1px solid #ebebeb;
+    color: #757575
+}
+
+.trackPreviewPlayer .controls li .icon.icon-play {
+    padding: 7px 12px
+}
+
+.trackPreviewPlayer .controls li .icon.icon-pause-nocircle {
+    padding: 7px 10px
+}
+
+.trackPreviewPlayer .controls li .icon.icon-actions {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 7px 10px;
+    -webkit-animation-name: rotateAnim;
+    animation-name: rotateAnim;
+    -webkit-animation-duration: .35s;
+    animation-duration: .35s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+.media-forms .add .icon-add,
+.media-forms .searchbox .icon-media {
+    position: absolute;
+    color: #ddd;
+    z-index: 5;
+    top: 13px;
+    left: 27px;
+    border-right: 1px solid #ddd;
+    padding-right: 10px
+}
+
+.tracks-table .table-media-artwork .icon {
+    width: 26px;
+    height: 26px;
+    top: 14px;
+    left: 22px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    box-shadow: 0 3px 5px 0 rgba(135, 135, 135, .2);
+    border: 1px solid #ebebeb;
+    color: #757575
+}
+
+.tracks-table .table-media-artwork .icon.icon-stop {
+    padding: 3px 5px
+}
+
+.tracks-table .table-media-artwork .icon.icon-play {
+    padding: 3px 7px 0;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in
+}
+
+.tracks-table .table-media-artwork .icon.icon-actions {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 3px 5px;
+    -webkit-animation-name: rotateAnim;
+    animation-name: rotateAnim;
+    -webkit-animation-duration: .35s;
+    animation-duration: .35s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+.tracks-table .table-media-artwork:hover .icon-play {
+    opacity: 1
+}
+
+.tag-select span .icon {
+    font-size: 9px;
+    padding-left: 5px
+}
+
+.dropdown .icon-actions {
+    font-size: 1.8em;
+    position: relative;
+    top: 2px;
+    -webkit-transition: color .2s ease-in;
+    transition: color .2s ease-in
+}
+
+.dropdown .icon-actions:hover {
+    color: #EF4043
+}
+
+body {
+    background: 0 0
+}
+
+
+

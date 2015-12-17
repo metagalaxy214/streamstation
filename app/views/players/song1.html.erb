@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="radioco-player" style="text-shadow: rgb(230, 39, 63) 0px 1px 3px;">
+  <div class="wrap stopped" style="border-radius: 8px;">
+      <ul class="info large">
+          <li class="artwork">
+            <i class="fa fa-play-circle icon icon-player" style="color: rgb(54, 67, 73); margin-left: 125.5px; text-shadow: rgb(255, 64, 88) 0px 1px 10px;"></i>
+              <%= image_tag 'Help-You-Chill-Logo.png', width: 400, height: 400, class: 'current-artwork resize-w resize-h' %>
+              
+          </li>
+          <li class="controls resize-w" style="color: rgb(54, 67, 73); width: 315px; background: rgb(255, 64, 88);">
+              <div class="trackinformation">
+                  <ul>
+                      <li class="track-name">My First Song</li>
+                      <li class="artist-name">Michael Blu</li>
+                  </ul>
+              </div>
+              <ul class="actions">
+                  <li><i class="speaker" id="pseudoCssId0" style="color: rgb(54, 67, 73);"><span class="low"></span></i></li>
+                  <li><div class="volume-slider noUi-target noUi-ltr noUi-horizontal noUi-connect" style="background: rgb(123, 145, 157);"><div class="noUi-base"><div class="noUi-origin noUi-background" style="left: 35.3191%; background: rgb(255, 115, 139);"><div class="noUi-handle noUi-handle-lower" style="border-color: rgb(123, 145, 157);"></div></div></div></div></li>
+                  <li><span class="streamtime" style="display: none;">00:00:00</span></li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+  </div>
+  <div class="social" style="margin-top:7px; height:25px;">
+      <div class="twitter">
+          <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.c633b87376883931e7436b93bb46a699.en.html#_=1450370812377&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fembed.radio.co%2Fplayer%2F1b8a17d.html&amp;size=m&amp;text=I%20Wanna%20Dance&amp;type=share&amp;url=https%3A%2F%2Fembed.radio.co%2Fplayer%2F1b8a17d.html" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
+      </div>
+      <div class="facebook-share"></div>
+      <div class="embed"><a href="#">Embed</a></div>
+  </div>
+</div>
+
+<div class="playing">
+  <span class="radioplayer"
+  data-src="http://streaming.radio.co/sd91f274af/listen"
+  data-playbutton="true"
+  data-volumeslider="true"
+  data-elapsedtime="false"
+  data-nowplaying="true"
+  data-showplayer="false"
+  data-albumArtwork="true"></span>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+<script>
+//initialise the pluhin with the element to the reference variable of 'player'
+ var player = $('.radioplayer').radiocoPlayer();
+</script>
