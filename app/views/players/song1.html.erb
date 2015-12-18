@@ -9,14 +9,25 @@
           </li>
           <li class="controls resize-w" style="color: rgb(54, 67, 73); width: 400px; background: rgb(163, 127, 185);">
               <div class="trackinformation">
-                  <ul>
-                      <li class="track-name">My First Song</li>
-                      <li class="artist-name">Michael Blu</li>
+                  <ul>                      
+                      <span>
+                        <img id="artworkImage" src="http://is1.mzstatic.com/image/thumb/Music5/v4/ec/66/08/ec660824-fcd3-8c55-5d53-0f1a2ea49e66/source/100x100bb.jpg" width="40" height="40" />
+                      </span>
+                      <li>
+                        <span class="radioplayer"
+                          data-src="https://streaming.radio.co/s20761ce2a/listen"
+                          data-playbutton="false"
+                          data-volumeslider="false"
+                          data-elapsedtime="false"
+                          data-nowplaying="true"
+                          data-showplayer="false"
+                          data-albumArtwork="false"></span>
+                      </li>
                   </ul>
               </div>
               <ul class="actions">
                   <li><i class="fa fa-volume-off speaker" id="pseudoCssId0" style="color: rgb(54, 67, 73);"><span class="low"></span></i></li>
-                  <li><input type="text" data-slider="true" value="0.8" data-slider-highlight="true"></li>
+                  <li><input type="text" data-slider="true" value="0.5" data-slider-highlight="true"></li>
                   <li><span class="streamtime" style="display: none;">00:00:00</span></li>
               </ul>
           </li>
@@ -31,25 +42,60 @@
         <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.ifeelgood.fm.usrfiles.com%2Fhtml%2F62dee9_e318dc1afcc4ba522b2c62fb06db3b9d.html&amp;layout=button&amp;appId=184840588312425" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></div>
       <div class="embed"><a href="#">Embed</a></div>
   </div>
-
-  <span class="radioplayer"
-  data-src="http://streaming.radio.co/sd91f274af/listen"
-  data-playbutton="false"
-  data-volumeslider="false"
-  data-elapsedtime="false"
-  data-nowplaying="false"
-  data-showplayer="false"
-  data-albumArtwork="false"></span>
+  <span class="status"><span></span></span>
+  
 
 </div>
 
 
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
 <script>
 //initialise the pluhin with the element to the reference variable of 'player'
  var player = $('.radioplayer').radiocoPlayer();
+ var prv_volume = 50;
+ var b_muted = false;
  $("[data-slider]").bind("slider:ready slider:changed", function (event, data) {
-    console.log(data.value.toFixed(3));
+    prv_volume = data.value.toFixed(2)*100;
+    updateVolume(prv_volume);
   });
+  $('.icon-player').on('click', function(){    
+    prv_volume = parseFloat($("[data-slider]").val()).toFixed(2)*100;
+    player.volume(prv_volume);
+
+    player.playToggle();
+    if(player.isPlaying()){
+      $('.icon-player').removeClass('fa-play-circle').addClass('fa-pause-circle');
+    }else{
+      $('.icon-player').removeClass('fa-pause-circle').addClass('fa-play-circle');
+    }
+    
+  });
+  $('i.speaker').on('click', function(){
+    if(b_muted){
+      $('i.speaker span').removeClass('muted').addClass('low');
+      b_muted = false;
+      updateVolume(prv_volume);
+      $("[data-slider]").val(prv_volume);
+    }else{
+      updateVolume(0);
+      b_muted = true;      
+    }
+  });
+  player.event('audioPlay', function(e){
+    $('img#artworkImage').attr('src', player.getArtwork(500,500,75));    
+  })
+  function updateVolume(volume){    
+    player.volume(volume);
+    if(volume > 50){
+      $('i.speaker span').attr('class', 'high');
+    }else{
+      if(volume == 0){
+        $('i.speaker span').attr('class', 'muted');
+      }else{
+        $('i.speaker span').attr('class', 'low');
+      }
+    }
+  }
+
 </script>

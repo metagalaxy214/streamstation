@@ -1005,7 +1005,7 @@ span.share-button {
 }
 
 .radioco-player .speaker .high {
-    top: 7px;
+    top: 5px;
     right: -8px;
     width: 12px;
     height: 12px;
@@ -1027,10 +1027,11 @@ span.share-button {
     display: block;
     position: absolute;
     right: -6px;
-    top: -2px;
+    top: 2px;
     width: auto;
     height: auto;
-    font-style: normal
+    font-style: normal;
+    font-size: 0.80em;
 }
 
 .radioco-player .volume-slider {
