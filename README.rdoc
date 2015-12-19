@@ -1,28 +1,22 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Help Me Chill
+/players/song1
+http://streaming.radio.co:80/s20761ce2a/listen
+https://streaming.radio.co/s20761ce2a/listen
+embeded:
+<script src="https://embed.radio.co/player/cfebd89.js"></script>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+I Wanna Dance
+/players/song2
+http://streaming.radio.co:80/s56c014a5a/listen
+
+<script src="https://embed.radio.co/player/1b8a17d.js"></script>
+
+
+
+Lift Me Up
+/players/song3
+http://streaming.radio.co:80/sc039c0d9a/listen
+
+<script src="https://embed.radio.co/player/f0f621a.js"></script>

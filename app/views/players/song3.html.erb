@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="radioco-player" style="text-shadow: rgb(230, 39, 63) 0px 1px 3px;">
+  <div class="wrap stopped" style="border-radius: 8px;">
+      <ul class="info large">
+          <li class="artwork">
+            <i class="fa fa-play-circle icon icon-player" style="color: rgb(54, 67, 73); margin-left: 168.5px; text-shadow: rgb(255, 64, 88) 0px 1px 10px;"></i>
+              <%= image_tag 'Help-You-Dance-Logo.png', width: 400, height: 400, class: 'current-artwork resize-w resize-h' %>
+              
+          </li>
+          <li class="controls resize-w" style="color: rgb(54, 67, 73); width: 400px; background: rgb(255, 64, 88);">
+              <div class="trackinformation">
+                  <ul>                      
+                      <span>
+                        <img id="artworkImage" src="http://is1.mzstatic.com/image/thumb/Music5/v4/ec/66/08/ec660824-fcd3-8c55-5d53-0f1a2ea49e66/source/100x100bb.jpg" width="40" height="40" />
+                      </span>
+                      <li>
+                        <span class="radioplayer"
+                          data-src="https://streaming.radio.co/sc039c0d9a/listen"
+                          data-playbutton="false"
+                          data-volumeslider="false"
+                          data-elapsedtime="false"
+                          data-nowplaying="true"
+                          data-showplayer="false"
+                          data-albumArtwork="false"></span>
+                      </li>
+                  </ul>
+              </div>
+              <ul class="actions">
+                  <li><i class="fa fa-volume-off speaker" id="pseudoCssId0" style="color: rgb(54, 67, 73);"><span class="low"></span></i></li>
+                  <li><input type="text" data-slider="true" value="0.5" data-slider-highlight="true"></li>
+                  <li><span class="streamtime" style="display: none;">00:00:00</span></li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+  </div>
+  <div class="social" style="margin-top:7px; height:25px;">
+      <div class="twitter">
+          <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.c633b87376883931e7436b93bb46a699.en.html#_=1450370812377&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fembed.radio.co%2Fplayer%2F1b8a17d.html&amp;size=m&amp;text=I%20Wanna%20Dance&amp;type=share&amp;url=https%3A%2F%2Fembed.radio.co%2Fplayer%2F1b8a17d.html" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
+      </div>
+      <div class="facebook-share">
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.ifeelgood.fm.usrfiles.com%2Fhtml%2F62dee9_e318dc1afcc4ba522b2c62fb06db3b9d.html&amp;layout=button&amp;appId=184840588312425" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></div>
+      <div class="itune-buy">
+        <a href="http://www.apple.com/itunes/" class="btn btn-primary btn-xs">Buy</a>
+      </div>
+      <div class="embed"><a href="#">Embed</a></div>
+  </div>
+  <span class="status"><span></span></span>
+  
+
+</div>
+
+
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+<script>
+//initialise the pluhin with the element to the reference variable of 'player'
+ var player = $('.radioplayer').radiocoPlayer();
+ var prv_volume = 50;
+ var b_muted = false;
+ $("[data-slider]").bind("slider:ready slider:changed", function (event, data) {
+    prv_volume = data.value.toFixed(2)*100;
+    updateVolume(prv_volume);
+  });
+  $('.icon-player').on('click', function(){    
+    prv_volume = parseFloat($("[data-slider]").val()).toFixed(2)*100;
+    player.volume(prv_volume);
+
+    player.playToggle();
+    if(player.isPlaying()){
+      $('.icon-player').removeClass('fa-play-circle').addClass('fa-pause-circle');
+    }else{
+      $('.icon-player').removeClass('fa-pause-circle').addClass('fa-play-circle');
+    }
+    
+  });
+  $('i.speaker').on('click', function(){
+    if(b_muted){
+      $('i.speaker span').removeClass('muted').addClass('low');
+      b_muted = false;
+      updateVolume(prv_volume);
+      $("[data-slider]").val(prv_volume);
+    }else{
+      updateVolume(0);
+      b_muted = true;      
+    }
+  });
+  $('.embed a').on('click', function(){    
+    embed_popup('https://embed.radio.co/player/f0f621a.js');
+  });
+  player.event('audioPlay', function(e){
+    $('img#artworkImage').attr('src', player.getArtwork(500,500,75));    
+  })
+  function updateVolume(volume){    
+    player.volume(volume);
+    if(volume > 50){
+      $('i.speaker span').attr('class', 'high');
+    }else{
+      if(volume == 0){
+        $('i.speaker span').attr('class', 'muted');
+      }else{
+        $('i.speaker span').attr('class', 'low');
+      }
+    }
+  }
+
+</script>
