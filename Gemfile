@@ -47,3 +47,4 @@ group :development do
 end
 
 gem 'font-awesome-sass', '~> 4.5.0'
+gem 'puma'
