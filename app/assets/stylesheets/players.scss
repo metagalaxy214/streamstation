@@ -11,7 +11,10 @@
     position: relative;
     bottom: 5px
 }
-
+.current-artwork {
+    width: 315px;
+    height: 315px;
+}
 .comparison .icon {
     position: relative;
     top: 2px
@@ -942,7 +945,7 @@ span.share-button {
 }
 
 .radioco-player ul.info.large .artwork .icon {
-    top: 47%;
+    top: 45%;
     font-size: 4em
 }
 
@@ -1003,7 +1006,9 @@ span.share-button {
     transform: rotate(45deg);
     border-radius: 0 15px 0 0
 }
-
+.slider-controller {
+    width: 100%;
+}
 .radioco-player .speaker .high {
     top: 5px;
     right: -8px;
