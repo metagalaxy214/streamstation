@@ -23,4 +23,33 @@ http://streaming.radio.co:80/sc039c0d9a/listen
 
 
 
-<iframe width="100%" height="100%" src="https://radioco.herokuapp.com"></iframe>
+==============
+
+<iframe src="https://radioco.herokuapp.com/players/song1" width="315" style="border: none; border-radius: 8px; height: 454px;"></iframe>
+
+
+function receiveMessage(event)
+{  
+  if (event.origin !== "https://radioco.herokuapp.com")
+    return;
+  if(event.data.messag == 'ITUNE-BUY-1'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+
+  }
+  if(event.data.messag == 'ITUNE-BUY-2'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
+  if(event.data.messag == 'ITUNE-BUY-3'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
+}
+window.addEventListener("message", receiveMessage, false);

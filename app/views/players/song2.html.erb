@@ -39,7 +39,7 @@
         <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.ifeelgood.fm.usrfiles.com%2Fhtml%2F62dee9_e318dc1afcc4ba522b2c62fb06db3b9d.html&amp;layout=button&amp;appId=184840588312425" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></div>
 
       <div class="itune-buy">
-        <a href="http://www.apple.com/itunes/" class="btn btn-primary btn-xs">Buy</a>
+        <a href="#" class="btn btn-primary btn-xs">Buy</a>
       </div>
       <div class="embed"><a href="#">Embed</a></div>
   </div>
@@ -86,7 +86,9 @@
   $('.embed a').on('click', function(){    
     embed_popup('https://embed.radio.co/player/1b8a17d.js');
   });
-
+  $('.itune-by a').on('click', function(){
+    window.parent.postMessage("ITUNE-BY-2", 'http://www.ifeelgood.fm/');
+  });
   player.event('audioPlay', function(e){
     $('img#artworkImage').attr('src', player.getArtwork(500,500,75));    
   })
