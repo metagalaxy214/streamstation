@@ -2,10 +2,12 @@
   <div class="radioco-player" style="text-shadow: rgb(230, 39, 63) 0px 1px 3px;">
   <div class="wrap stopped" style="border-radius: 8px;">
       <ul class="info large">
-          <li class="artwork">
+          <li class="artwork shake-constant">
+            
             <i class="fa fa-play-circle icon icon-player" style="color: rgb(54, 67, 73); margin-left: 129.5px; text-shadow: rgb(255, 64, 88) 0px 1px 10px;"></i>
-              <%= image_tag 'Help-You-Chill-Logo.png', class: 'current-artwork resize-w resize-h' %>
-              
+          
+            <%= image_tag 'Help-You-Chill-Logo.png', class: 'current-artwork resize-w resize-h' %>
+          
           </li>
           <li class="controls resize-w" style="color: rgb(54, 67, 73); width: 315px; background: rgb(163, 127, 185);">
               <div class="trackinformation">
@@ -66,8 +68,10 @@
     player.playToggle();
     if(player.isPlaying()){
       $('.icon-player').removeClass('fa-play-circle').addClass('fa-pause-circle');
+      $('li.artwork').addClass('shake-slow');
     }else{
       $('.icon-player').removeClass('fa-pause-circle').addClass('fa-play-circle');
+      $('li.artwork').removeClass('shake-slow');
     }
     
   });

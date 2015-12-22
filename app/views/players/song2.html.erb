@@ -2,7 +2,7 @@
   <div class="radioco-player" style="text-shadow: rgb(255, 255, 136) 0px 1px 3px;">
   <div class="wrap stopped" style="border-radius: 8px;">
       <ul class="info large">
-          <li class="artwork">
+          <li class="artwork shake-constant">
             <i class="fa fa-play-circle icon icon-player" style="color: rgb(54, 67, 73); margin-left: 129.5px; text-shadow: rgb(255, 64, 88) 0px 1px 10px;"></i>
               <%= image_tag 'iFeelGood-Logo.png', class: 'current-artwork resize-w resize-h' %>
               
@@ -12,7 +12,7 @@
                   <ul>
                       <li>
                         <span class="radioplayer"
-                          data-src="https://streaming.radio.co/s56c014a5a/listen"
+                          data-src="https://streaming.radio.co/sc039c0d9a/listen"
                           data-playbutton="false"
                           data-volumeslider="false"
                           data-elapsedtime="false"
@@ -67,8 +67,10 @@
     player.playToggle();
     if(player.isPlaying()){
       $('.icon-player').removeClass('fa-play-circle').addClass('fa-pause-circle');
+      $('li.artwork').addClass('shake-slow');
     }else{
       $('.icon-player').removeClass('fa-pause-circle').addClass('fa-play-circle');
+      $('li.artwork').removeClass('shake-slow');
     }
     
   });
