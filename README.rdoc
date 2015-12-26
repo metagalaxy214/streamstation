@@ -53,3 +53,25 @@ function receiveMessage(event)
   }
 }
 window.addEventListener("message", receiveMessage, false);
+
+
+
+Speed:
+
+Help Me Chill = Song1
+Lift Me Up = Song2
+I Wanna Dance = Song3
+
+
+Chill < Lift Me Up < I Wanna Dance
+
+
+Song1 < Song2 < Song3
+
+
+
+
+
+
+
+
