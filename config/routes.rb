@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       get 'song2'
       get 'song3'
     end
-  end  
+  end
+  get '/like/:song_id', to: 'players#like'
+  get '/dashboard', to: 'players#dashboard'
+  
   root 'players#song1'
 end

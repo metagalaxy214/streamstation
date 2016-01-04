@@ -1,4 +1,4 @@
-<div class="container">
+<div class="station">
   <div class="radioco-player" style="text-shadow: rgb(163, 127, 185) 0px 1px 3px;">
   <div class="wrap stopped" style="border-radius: 8px;">
       <ul class="info large">
@@ -43,7 +43,11 @@
         <a href="#" class="btn btn-primary btn-xs">Buy</a>
       </div>
       <div class="like-control">
-        <a class="btn btn-xs btn-heart"><i class="fa fa-heart"></i> Like </a>
+        <% if @is_liked %>
+          <a class="btn btn-xs btn-heart like-song-1"><i class="fa fa-heart liked-color"></i> Like </a>
+        <% else %>
+          <a class="btn btn-xs btn-heart like-song-1"><i class="fa fa-heart"></i> Like </a>
+        <% end %>
       </div>
       <div class="embed"><a href="#">Embed</a></div>
   </div>
@@ -97,6 +101,12 @@
   $('.itune-buy a').on('click', function(){
     window.parent.postMessage("ITUNE-BY-1", 'http://www.ifeelgood.fm/');
   });
+  $('.like-song-1').on('click', function(){
+    $.get( "/like/1", function( data ) {
+      $('.fa-heart').addClass('liked-color');      
+    });
+  });
+
 
   player.event('audioPlay', function(e){
     $('img#artworkImage').attr('src', player.getArtwork(500,500,75));    

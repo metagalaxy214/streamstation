@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="content">
+    <h3> Like Information </h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th> # </th>
+          <th> Station </th>
+          <th> IP </th>
+          <th> Date </th>
+        <tr>
+      </thead>
+      <tbody>
+        <% @likes.each_with_index do |like, like_index| %>
+        <tr>
+          <td> <%= like_index+1 %> </td>
+          <td> <%= get_station_name(like.song_id) %> </td>
+          <td> <%= like.ip_address %> </td>
+          <td> <%= like.updated_at.strftime("%I:%M%p %m/%d/%Y") %> </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
